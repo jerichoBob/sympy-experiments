@@ -16,3 +16,11 @@ Just want to make sure that I have sympy installed correctly. If I do, then I sh
 ## Experiment #1
 
 The first experiment is to calculate the curl of a symbolic vector. The motivation came from watching a  video from Rhett Allain [Stoke's Theorem Example: Flux through different surfaces with the same boundary](https://www.youtube.com/watch?v=Nc2kf8Tq7gE) which is a follow-on to the very nice video [Verifying Stoke's Theorem in Python with a Monte Carlo Flux](https://www.youtube.com/watch?v=wgwLXr5ZX6g) (he's a great teacher/explainer) and it looked like he calculated the curl incorrectly (it happens and it's part of his charm and I'm not trusting myself that he is wrong until I do this experiment :) ). Anyway, this is where the rabbit trail led me ... :D. Score one for the internet.
+
+Yeah, did the experiment and got this
+
+```(python)
+v2 = 3*R.x*R.y*R.i + 4*R.x*R.z*R.j + (-6*R.x)*R.k
+curl(v2) = (-4*R.x)*R.i + 6*R.j + (-3*R.x + 4*R.z)*R.k
+curl(v2) matrix= Matrix([[-4*R.x], [6], [-3*R.x + 4*R.z]])
+```
